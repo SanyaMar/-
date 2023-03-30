@@ -1,0 +1,20 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+  setlocale (LC_ALL,"Russian");
+  int i, N, count=0, sum=0;
+  float B[100]; 
+  cout<<"Введите N: ";
+  cin>>N;
+  cout<<"Введите элементы массива: ";
+  for(i = 0; i < N; i++)cin >> B[i]; 
+  for(i = 0; i < N; i++){
+     if(B[i]<0)count++;
+     else sum+=B[i];
+ }
+ cout<<"Сумма положительных элементов= "<<sum<<endl<<"Количество отрицательных элементов= "<<count;
+ return 0;
+}
